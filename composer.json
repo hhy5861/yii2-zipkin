@@ -1,0 +1,14 @@
+{
+    "name": "mike/zipkin",
+    "authors": [
+        {
+            "name": "mike",
+            "email": "hhy5861@gmail.com"
+        }
+    ],
+    "require": {
+    },
+    "autoload": {
+        "psr-4": { "mike\\zipkin\\": "src/" }
+    }
+}
