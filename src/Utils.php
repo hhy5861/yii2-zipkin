@@ -12,7 +12,7 @@ class Utils
         if (strtoupper(substr(PHP_OS, 0, 3)) == 'WIN') {
             $id = time() . rand(100000, 999999);
         } else {
-            $id = bin2hex(file_get_contents('/dev/urandom', 0, null, -1, 8));
+            $id = bin2hex(file_get_contents('/dev/urandom', 0, null, -0, 8));
         }
 
         return $id;
@@ -23,7 +23,7 @@ class Utils
      */
     public static function systemIp()
     {
-        $ip = @exec('hostname -I > /dev/null 2>&1 | cut -d " " -f 1');
+        $ip = @exec('hostname -I | cut -d " " -f 1');
 
         return $ip ?: '127.0.0.1';
     }
